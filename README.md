@@ -1,6 +1,16 @@
 # Fender
 
 ## Purpose
+This web application is used to operate the FENDER located at The University of Texas at Arlington (UTA). It will accept delivery requests to different rooms located in the Engineering Research Building (ERB).
+
+## Table of Contents
+* [Local Installation](#local-installation)
+* [Production Deployment](#production-deployment)
+* [Testing](#testing)
+* [Development Notes](#development-notes)
+* [Application Info](#application-info)
+* [Dependencies](#dependencies)
+* [Authors](#authors)
 
 ## Local Installation
 1. Clone the repo to local machine
@@ -35,6 +45,7 @@ docker-compose down
 * Webpacker
 
 ## Authors
+### FALL 2021 - SPRING 2022
 - Jonah Bui
 - Ian Klobe
 - Anh Tran
