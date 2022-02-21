@@ -23,7 +23,15 @@ docker-compose build
 ```
 docker-compose up
 ```
-
+5. The database has not been created yet. Do so by first attaching a shell to the docker container. The provided way to do so is:
+```
+./docker.sh
+```
+6. After the shell attaches to the container, issue out the following commands:
+```
+rake db:create
+rake db:migrate
+```
 ## Production Deployment
 
 ## Testing
