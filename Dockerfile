@@ -10,7 +10,6 @@ RUN bundle install
 # Setup packages for React
 COPY package.json /fender/package.json
 RUN npm install --global yarn
-RUN npm install
 RUN yarn install
 
 # Add a script to be executed every time the container starts.

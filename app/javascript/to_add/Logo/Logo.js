@@ -1,11 +1,11 @@
-import React from "react";
-import logo from "../../../assets/images/fender_logo.png"
+import logo from "../../fender_logo.png"
+
 
 const logoStyle = {
   height: "50px"
 }
 
-export default function Logo() {
+function Logo() {
   return (
     <img
       src={logo}
@@ -15,3 +15,5 @@ export default function Logo() {
     />
   );
 }
+
+export default Logo;

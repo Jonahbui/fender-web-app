@@ -14,9 +14,3 @@ development:
 test:
   <<: *default
   database: fender_test
-
-production:
-  <<: *default
-  database: fender_production
-  username: fender
-  password: <%= ENV["FENDER_DATABASE_PASSWORD"] %>

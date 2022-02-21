@@ -1,4 +1,8 @@
-import * as React from 'react';
+
+import {
+  Navigate
+} 
+from "react-router-dom";import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,7 +15,7 @@ import Logo from '../Logo/Logo.js';
 const pages = { 'Home' : '', 'Queue' : 'queue'};
 
 
-export default function ResponsiveAppBar() {
+const ResponsiveAppBar = () => {
   return (
     <AppBar position="static">
       <Container sx={{width: '100%', margin:"0"}} maxWidth={false}>
@@ -40,3 +44,4 @@ export default function ResponsiveAppBar() {
     </AppBar>
   );
 };
+export default ResponsiveAppBar;

@@ -1,24 +1,42 @@
-# README
+# Fender
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Purpose
 
-Things you may want to cover:
+## Local Installation
+1. Clone the repo to local machine
+2. Install Docker
+3. In the local repo, run:
+```
+docker-compose build
+```
+4. If the build succeeds, run:
+```
+docker-compose up
+```
 
-* Ruby version
+## Production Deployment
 
-* System dependencies
+## Testing
 
-* Configuration
+## Development Notes
+- Set indentation to 2 spaces for consistency
+- Run the following to shutdown the rails application
+```
+docker-compose down
+```
+## Application Info
+* Ruby version: 3.1.0
+* Database: postgresql
 
-* Database creation
+### Dependencies
+* MUI
+* Roboto-font
+* React-rails
+* Webpacker
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Authors
+- Jonah Bui
+- Ian Klobe
+- Anh Tran
+- Burhanuddin Chinwala
+- Connor Dominguez

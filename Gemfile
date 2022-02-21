@@ -3,15 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
 
+gem 'react-rails'
+gem 'webpacker'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-# MIGHT be problematic now that the app is using webpacker (both do the same thing)
 gem "sprockets-rails"
 
-# [https://guides.rubyonrails.org/webpacker.html]
-gem "webpacker"
+gem 'sqlite3'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
