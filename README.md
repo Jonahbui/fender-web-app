@@ -44,11 +44,8 @@ bundle exec rspec
 
 ## Development Notes
 - Set indentation to 2 spaces for consistency
-- Run the following to shutdown the rails application
+- Press CTRL+C to forcefully shutdown the rails application
 - Ensure all files have the UNIX file endings, LF, or else you may not be able to start the application
-```
-docker-compose down
-```
 - A powershell script is attached that will allow you to attach a shell to a docker container. Just run:
 ```
 .\docker.ps1
