@@ -8,7 +8,7 @@ import {
   Container,
   Toolbar,
   Typography
-} from '~@mui/material';
+} from '@mui/material';
 
 import Logo from "../logos/Logo";
 
