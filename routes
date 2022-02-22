@@ -1,6 +1,8 @@
                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
+                              info_index GET    /info/index(.:format)                                                                             info#index
                                     root GET    /                                                                                                 enqueue#index
                            enqueue_index GET    /enqueue(.:format)                                                                                enqueue#index
+                                         GET    /info(.:format)                                                                                   info#index
                              queue_index GET    /queue(.:format)                                                                                  queue#index
                               edit_queue GET    /queue/:id/edit(.:format)                                                                         queue#edit
                                    queue GET    /queue/:id(.:format)                                                                              queue#show

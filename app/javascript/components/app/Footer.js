@@ -19,6 +19,9 @@ class Footer extends React.Component {
             <BottomNavigationAction href={this.props.info_url} label="Info" icon={<InfoIcon />} />
           </BottomNavigation>
         </Paper>
+        <Paper className="hidden" sx={{ position: 'relative', bottom:0, left: 0, right: 0 }} elevation={3}>
+          <BottomNavigation></BottomNavigation>
+        </Paper>
       </React.Fragment>
     );
   }

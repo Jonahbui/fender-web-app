@@ -12,8 +12,13 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
 
- body{
-   margin: 0px;
- }
+body{
+  margin: 0px;
+  background-color: gainsboro;
+}
+
+.hidden{
+  visibility: hidden;
+}

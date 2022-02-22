@@ -1,1 +1,8 @@
-<%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+<body>
+  <%= react_component("panel/Panel", { 
+    content: [
+      { title: "Enqueue", xs: 12, md: 6, minHeight: 0, content: "" },
+      { title: "How To Use", xs: 12, md: 6, minHeight: 0, content: "" }
+    ]
+  }) %>
+</body>
