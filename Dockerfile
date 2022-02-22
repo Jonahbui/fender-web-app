@@ -9,6 +9,7 @@ RUN bundle install
 
 # Setup packages for React
 COPY package.json /fender/package.json
+COPY yarn.lock /fender/yarn.lock
 RUN npm install --global yarn
 RUN yarn install
 

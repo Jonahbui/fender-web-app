@@ -32,6 +32,16 @@ docker-compose up
 rake db:create
 rake db:migrate
 ```
+7. DONE
+8. If you get the error
+```
+Webpacker::Manifest::MissingEntryError in ...
+```
+then you need to run:
+```
+rails webpacker:install
+rails webpacker:install:react
+```
 
 ## Production Deployment
 TBA
