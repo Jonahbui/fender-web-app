@@ -7,7 +7,7 @@ import Panel from "../panels/Panel"
 
 class Index extends React.Component {
   render () {
-    const enqueue_content = <Container padding={20}>
+    const enqueue_content = <Container sx={{padding: 2}}>
       <Stack spacing={3} align="center">
         <ComboBox label_name="Departure" items={this.props.locations}/>
         <ComboBox label_name="Destination" items={this.props.locations}/>
@@ -20,7 +20,7 @@ class Index extends React.Component {
 
     </Container>
     const overview_content = <Container padding={20}>
-      
+
     </Container>
     const panel_content = [
       { title: "Enqueue", xs: 12, md: 12, minHeight: 0, component_to_render: enqueue_content, key: "enqueue-enqueue"},
