@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-class ComboBox extends React.Component {
+class Index extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -9,4 +9,4 @@ class ComboBox extends React.Component {
   }
 }
 
-export default ComboBox
+export default Index

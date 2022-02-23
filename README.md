@@ -1,7 +1,7 @@
 # Fender
-
 ## Purpose
 This web application is used to operate the FENDER located at The University of Texas at Arlington (UTA). It will accept delivery requests to different rooms located in the Engineering Research Building (ERB).
+
 
 ## Table of Contents
 * [Local Installation](#local-installation)
@@ -10,7 +10,9 @@ This web application is used to operate the FENDER located at The University of 
 * [Development Notes](#development-notes)
 * [Application Info](#application-info)
 * [Dependencies](#dependencies)
+* [References](#references)
 * [Authors](#authors)
+
 
 ## Local Installation
 1. Clone the repo to local machine
@@ -23,7 +25,7 @@ docker-compose build
 ```
 docker-compose up
 ```
-5. The database has not been created yet. Do so by first attaching a shell to the docker container. Easy way to attach a shell is by calling the following powershell script:
+5. The database has not been created yet. Do so by first attaching a shell to the docker container. Easy way to attach a shell is by calling the following [powershell script](#development-notes):
 ```
 .\docker.ps1
 ```
@@ -43,14 +45,17 @@ rails webpacker:install
 rails webpacker:install:react
 ```
 
+
 ## Production Deployment
 TBA
+
 
 ## Testing
 To execute test cases, run the following inside the docker container:
 ```
 bundle exec rspec
 ```
+
 
 ## Development Notes
 - Set indentation to 2 spaces for consistency
@@ -60,15 +65,29 @@ bundle exec rspec
 ```
 .\docker.ps1
 ```
+- If you are running the application windows and would like to use powershell scripts, ensure your 
+windows device has its [execution policy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2) set to run scripts.
+
+
 ## Application Info
 * Ruby version: 3.1.0
 * Database: postgresql
+
 
 ### Dependencies
 * [Material-UI](https://mui.com/)
 * [Roboto-font](https://fonts.google.com/specimen/Roboto)
 * [react-rails](https://github.com/reactjs/react-rails)
 * [Webpacker](https://rubygems.org/gems/webpacker/versions/0.1)
+
+
+### References
+* [Rails Guide](https://guides.rubyonrails.org/index.html)
+* [React Guide](https://reactjs.org/docs/)
+* [React for Rails](https://github.com/reactjs/react-rails)
+* [Docker for Rails](https://docs.docker.com/samples/rails/)
+* [Dockerfile](https://docs.docker.com/engine/reference/builder/)
+
 
 ## Authors
 ### FALL 2021 - SPRING 2022

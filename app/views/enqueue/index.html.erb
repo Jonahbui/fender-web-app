@@ -1,8 +1,3 @@
 <body>
-  <%= react_component("panel/Panel", { 
-    content: [
-      { title: "Enqueue", xs: 12, md: 6, minHeight: 0, content: "" },
-      { title: "How To Use", xs: 12, md: 6, minHeight: 0, content: "" }
-    ]
-  }) %>
+  <%= react_component("enqueue/Index", {locations: Location.get_locations}) %>
 </body>

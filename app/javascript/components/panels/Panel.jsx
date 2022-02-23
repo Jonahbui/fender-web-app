@@ -10,11 +10,11 @@ class Panel extends React.Component {
         <Grid container spacing={4} p={4}>
           {
             this.props.content.map((panel_content) => (
-              <Grid item xs={panel_content["xs"]} md={panel_content["md"]} >
+              <Grid item xs={panel_content["xs"]} md={panel_content["md"]} key={panel_content["key"]}>
                 <Paper elevation={8} style={{minHeight:panel_content["minHeight"]}}>
                   <Paper square><Typography variant="h4" align="center">{panel_content["title"]}</Typography></Paper>
-                  <Container align="center" sx={{p:5}}>
-                    {panel_content["content"]}
+                  <Container align="center" style={{padding:0}}>
+                    {panel_content["component_to_render"]}
                   </Container>
                 </Paper>
               </Grid>
@@ -25,6 +25,8 @@ class Panel extends React.Component {
     );
   }
 }
+
+
 
 Panel.propTypes = {
   content: PropTypes.array

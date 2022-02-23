@@ -1,9 +1,64 @@
 <body>
-  <%= react_component("panel/Panel", { 
-    content: [
-      { title: "Service Status", xs: 12, md: 3, minHeight: 0, content: "" },
-      { title: "Fender Status", xs: 12, md: 3, minHeight: 0, content: "" },
-      { title: "Help", xs: 12, md: 3, minHeight: 0, content: "" }
+
+  <%= 
+      service_content = [
+      {
+        key: "info-service-fender-connection",
+        primary_text: "Fender Connection",
+        secondary_text: "Offline"
+      },
+      {
+        key: "info-service-current-ticket",
+        primary_text: "Current Ticket",
+        secondary_text: "1"
+      },
+      {
+        key: "info-service-total-tickets",
+        primary_text: "Total Tickets",
+        secondary_text: "1"
+      }
     ]
-  }) %>
+    fender_content = [
+      {
+        key: "info-fender-battery-life",
+        primary_text: "Battery Life",
+        secondary_text: "0%"
+      },
+      {
+        key: "info-fender-last-location",
+        primary_text: "Last Location",
+        secondary_text: "ERB 335A Indefinitely"
+      }
+    ]
+    docs_content = [
+      {
+        key: "info-docs-queue-api",
+        link_text: "Queue API",
+        link: ""
+      }
+    ]
+    support_content = [
+      {
+        key: "info-support-email",
+        primary_text: "Email",
+        secondary_text: "john@doe.edu"
+      },
+      {
+        key: "info-support-phone-number",
+        primary_text: "Phone Number",
+        secondary_text: "1-800-265-Empire"
+      },
+      {
+        key: "info-support-address",
+        primary_text: "Address",
+        secondary_text: "ERB 335A"
+      }
+    ]
+    react_component("info/Index", { 
+      service_content: service_content, 
+      fender_content: fender_content, 
+      docs_content:docs_content, 
+      support_content: support_content
+    })
+  %>
 </body>
