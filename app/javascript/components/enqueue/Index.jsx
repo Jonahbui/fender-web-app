@@ -7,7 +7,7 @@ import Panel from "../panels/Panel"
 
 class Index extends React.Component {
   render () {
-    const enqueue_content = <Container sx={{padding: 2}}>
+    const enqueue_content = <Container sx={{p: 4}}>
       <Stack spacing={3} align="center">
         <ComboBox label_name="Departure" items={this.props.locations}/>
         <ComboBox label_name="Destination" items={this.props.locations}/>
@@ -16,21 +16,47 @@ class Index extends React.Component {
         </Box>
       </Stack>
     </Container>
-    const instructions_content = <Container padding={20}>
 
-    </Container>
-    const overview_content = <Container padding={20}>
 
-    </Container>
+    const instructions_content = <Box sx={{px: 4, pb: 4, pt: 2}}>
+      <Typography variant="h6">Process</Typography>
+      <ol>
+        <li>Select a departure location (where the Fender will arrive to pick up the package, and leave from).</li>
+        <li>Select a destination (where the Fender will arrive and drop off the package).</li>
+        <li>Submit</li>
+      </ol>
+      <Typography variant="p">
+        After submitting your request, you will receive a ticket number, and will be 
+        redirected to the queue page for that ticket. You may use the ticket number, to locate,
+        and check on the status of your ticket.
+      </Typography>
+
+      <Typography variant="h6" sx={{mt:2}}>Tips</Typography>
+      <ul>
+        <li><b>Departure</b> is where the Fender will arrive to pick up the package, and leave from.</li>
+        <li><b>Destination</b> is where the Fender will arrive and drop off the package.</li>
+      </ul>
+    </Box>
+
+
+    const overview_content = <Box sx={{px: 4, pb: 4, pt: 2}}>
+        <Typography variant="h6">What is Fender?</Typography>
+        <p>
+        <b>Fender</b> is a robot that delivers packages around the ERB. It reduces the load 
+        of UTA personnel through this semi-automotated service.
+        </p>
+    </Box>
+
+
     const panel_content = [
       { title: "Enqueue", xs: 12, md: 12, minHeight: 0, component_to_render: enqueue_content, key: "enqueue-enqueue"},
       { title: "Instructions", xs: 12, md: 6, minHeight: 0, component_to_render: instructions_content, key: "enqueue-instructions"},
-      { title: "Overview", xs: 12, md: 6, minHeight: 0, component_to_render: "", key: "enqueue-overview" }
+      { title: "Overview", xs: 12, md: 6, minHeight: 0, component_to_render: overview_content, key: "enqueue-overview" }
     ]
+
+    
     return (
-      <React.Fragment>
-        <Panel content={panel_content}/>
-      </React.Fragment>
+      <Panel content={panel_content}/>
     );
   }
 }

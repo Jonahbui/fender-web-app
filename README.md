@@ -11,6 +11,7 @@ This web application is used to operate the FENDER located at The University of 
 * [Application Info](#application-info)
 * [Dependencies](#dependencies)
 * [References](#references)
+* [Fixes](#fixes)
 * [Authors](#authors)
 
 
@@ -33,6 +34,7 @@ docker-compose up
 ```
 rake db:create
 rake db:migrate
+rake db:seed
 ```
 7. DONE
 8. If you get the error
@@ -74,20 +76,29 @@ windows device has its [execution policy](https://docs.microsoft.com/en-us/power
 * Database: postgresql
 
 
-### Dependencies
+## Dependencies
 * [Material-UI](https://mui.com/)
 * [Roboto-font](https://fonts.google.com/specimen/Roboto)
 * [react-rails](https://github.com/reactjs/react-rails)
 * [Webpacker](https://rubygems.org/gems/webpacker/versions/0.1)
 
 
-### References
+## References
 * [Rails Guide](https://guides.rubyonrails.org/index.html)
 * [React Guide](https://reactjs.org/docs/)
 * [React for Rails](https://github.com/reactjs/react-rails)
 * [Docker for Rails](https://docs.docker.com/samples/rails/)
 * [Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
+## Fixes
+### JSON::ParserError
+```
+/usr/local/lib/ruby/3.1.0/json/common.rb:216:in `parse': 859: unexpected token at '' (JSON::ParserError)
+```
+This can be fixed by running:
+```
+docker-compose run web rails webpacker:clobber
+```
 
 ## Authors
 ### FALL 2021 - SPRING 2022

@@ -14,7 +14,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= javascript_pack_tag 'application' %>
+    <%= Rails.env.production? ? javascript_pack_tag('application') : javascript_packs_with_chunks_tag('application') %>
     <%= stylesheet_pack_tag 'application' %>
 
     <%= react_component("app/Header", {}) %>

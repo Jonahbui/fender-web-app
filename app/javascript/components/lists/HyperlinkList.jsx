@@ -29,7 +29,11 @@ HyperlinkList.defaultTypes = {
 }
 
 HyperlinkList.propTypes = {
-  content: PropTypes.array
+  content: PropTypes.arrayOf(PropTypes.shape({
+    key: PropTypes.string,
+    link: PropTypes.string,
+    link_text: PropTypes.string
+  }))
 }
 
 export default HyperlinkList
