@@ -42,7 +42,7 @@ class Index extends React.Component {
   */
 
   render () {
-    const enqueue_content = <Container sx={{p: 4}}>
+    const enqueue_content = <Container sx={{p: 4}} align="center">
       <FormControl>
         <Stack spacing={3} align="center">
           <ComboBox label_name="Departure" items={this.props.locations}/>

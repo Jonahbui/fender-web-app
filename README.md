@@ -30,11 +30,9 @@ docker-compose up
 ```
 .\docker.ps1
 ```
-6. After the shell attaches to the container, issue out the following commands while the container is running:
+6. After the shell attaches to the container, issue out the following command while the container is running:
 ```
-rake db:create
-rake db:migrate
-rake db:seed
+rails db:create db:migrate db:seed
 ```
 7. DONE
 8. If you get the error
