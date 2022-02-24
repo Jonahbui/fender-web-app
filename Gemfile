@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
 
+gem 'devise'
+gem 'delayed_job_active_record'
 gem 'react-rails'
 gem 'webpacker'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

@@ -81,6 +81,8 @@ windows device has its [execution policy](https://docs.microsoft.com/en-us/power
 * [Roboto-font](https://fonts.google.com/specimen/Roboto)
 * [react-rails](https://github.com/reactjs/react-rails)
 * [Webpacker](https://rubygems.org/gems/webpacker/versions/0.1)
+* [Delayed Job](https://github.com/collectiveidea/delayed_job)
+* [Devise](https://github.com/heartcombo/devise)
 
 
 ## References
