@@ -19,26 +19,20 @@ class VerticalLinearStepper extends React.Component {
       activeStep: 0
     }
   }
-  handleNext = () => {
+
+  handleNext() {
     this.setState({ activeStep: this.state.activeStep + 1 })
   }
 
+  handleBack() {
+
+  }
+
+  handleReset() {
+
+  }
+
   render () {
-    /*
-    const [activeStep, setActiveStep] = React.useState(0);
-
-    const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
-    const handleBack = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
-
-    const handleReset = () => {
-      setActiveStep(0);
-    };
-    */
     return (
       <Box sx={{ maxWidth: 400 }}>
         <Stepper activeStep={this.state.activeStep} orientation="vertical">

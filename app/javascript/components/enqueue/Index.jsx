@@ -21,9 +21,9 @@ class Index extends React.Component {
     const instructions_content = <Box sx={{px: 4, pb: 4, pt: 2}}>
       <Typography variant="h6">Process</Typography>
       <ol>
-        <li>Select a departure location (where the Fender will arrive to pick up the package, and leave from).</li>
-        <li>Select a destination (where the Fender will arrive and drop off the package).</li>
-        <li>Submit</li>
+        <li><Typography variant="p">Select a departure location (where the Fender will arrive to pick up the package, and leave from).</Typography></li>
+        <li><Typography variant="p">Select a destination (where the Fender will arrive and drop off the package).</Typography></li>
+        <li><Typography variant="p">Submit</Typography></li>
       </ol>
       <Typography variant="p">
         After submitting your request, you will receive a ticket number, and will be 

@@ -26,7 +26,7 @@ class Header extends React.Component {
 
               <Box>
               <Typography
-                  variant="h3"
+                  variant="h1"
                   noWrap
                   component="div"
                   sx={{ flexGrow: 1 }}

@@ -4,7 +4,7 @@
     All .jsx/.js files get recompiled into a single file and delivered.
   --->
   <%= 
-      service_content = [
+      tickets_content = [
         {
           key: "queue-service-fender-connection",
           link: "",
@@ -45,6 +45,23 @@
         description: 'Ready for pickup at destination'
       }
     ]
-    react_component("queue/Index", {steps: steps, service_content: service_content}) 
+      info_content = [
+      {
+        key: "queue-info-fender-connection",
+        primary_text: "Fender Connection",
+        secondary_text: "Offline"
+      },
+      {
+        key: "queue-info-current-ticket",
+        primary_text: "Current Ticket",
+        secondary_text: "1"
+      },
+      {
+        key: "queue-info-total-tickets",
+        primary_text: "Total Tickets",
+        secondary_text: "1"
+      }
+    ]
+    react_component("queue/Index", {steps: steps, tickets_content: tickets_content, info_content: info_content}) 
   %>
 </body>
