@@ -21,3 +21,6 @@ body{
 .hidden{
   visibility: hidden;
 }
+.turbo-progress-bar {
+  background-color: aliceblue;
+}

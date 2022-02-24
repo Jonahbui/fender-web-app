@@ -20,7 +20,7 @@ class VerticalLinearStepper extends React.Component {
     }
   }
 
-  handleNext() {
+  handleNext = () => {
     this.setState({ activeStep: this.state.activeStep + 1 })
   }
 

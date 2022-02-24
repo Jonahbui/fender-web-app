@@ -21,11 +21,13 @@ class Index extends React.Component {
     const instructions_content = <Box sx={{px: 4, pb: 4, pt: 2}}>
       <Typography variant="h6">Process</Typography>
       <ol>
-        <li><Typography variant="p">Select a departure location (where the Fender will arrive to pick up the package, and leave from).</Typography></li>
-        <li><Typography variant="p">Select a destination (where the Fender will arrive and drop off the package).</Typography></li>
-        <li><Typography variant="p">Submit</Typography></li>
+        <Typography>
+          <li>Select a departure location</li>
+          <li>Select a destination.</li>
+          <li>Submit</li>
+        </Typography>
       </ol>
-      <Typography variant="p">
+      <Typography>
         After submitting your request, you will receive a ticket number, and will be 
         redirected to the queue page for that ticket. You may use the ticket number, to locate,
         and check on the status of your ticket.
@@ -33,18 +35,21 @@ class Index extends React.Component {
 
       <Typography variant="h6" sx={{mt:2}}>Tips</Typography>
       <ul>
-        <li><b>Departure</b> is where the Fender will arrive to pick up the package, and leave from.</li>
-        <li><b>Destination</b> is where the Fender will arrive and drop off the package.</li>
+        <Typography>
+          <li><b>Departure</b> is where the Fender will arrive to pick up the package, and leave from</li>
+          <li><b>Destination</b> is where the Fender will arrive and drop off the package</li>
+        </Typography>
       </ul>
     </Box>
 
 
     const overview_content = <Box sx={{px: 4, pb: 4, pt: 2}}>
         <Typography variant="h6">What is Fender?</Typography>
-        <p>
-        <b>Fender</b> is a robot that delivers packages around the ERB. It reduces the load 
-        of UTA personnel through this semi-automotated service.
-        </p>
+        <Typography>
+          <b>Fender</b> is a robot that delivers packages around the ERB. It reduces the load 
+          of UTA personnel through this semi-automotated service. Fender is an acronym coined by 
+          Ian Klobe, standing for fully electronic next delivery errand runner.
+        </Typography>
     </Box>
 
 
