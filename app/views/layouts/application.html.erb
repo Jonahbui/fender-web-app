@@ -19,7 +19,11 @@
     <%= Rails.env.production? ? javascript_pack_tag('application') : javascript_packs_with_chunks_tag('application') %>
     <%= stylesheet_pack_tag 'application' %>
 
-    <%= react_component("app/Header", {}) %>
+    <%= react_component("app/Header", {
+      sign_in_action: user_session_url,
+      sign_out_action: destroy_user_session_url,
+      signed_in: user_signed_in?
+    }) %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -31,6 +35,12 @@
   </body>
   
   <footer>
-    <%= react_component("app/Footer", {queue_url: api_v1_queue_index_path, home_url: enqueue_index_path, info_url: info_index_path}) %>
+    <%= react_component("app/Footer", {
+      queue_url: api_v1_queue_index_path, 
+      home_url: enqueue_index_path, 
+      info_url: info_index_path,
+      admin_url: "",
+      signed_in: user_signed_in?
+    }) %>
   </footer>
 </html>

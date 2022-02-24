@@ -141,3 +141,5 @@ erb_locations = [
 erb_locations.each do |location|
   Location.create(name: "ERB #{location}", floor: location[0].to_i)
 end
+
+User.create(email: "fender@uta.edu", password: "password")

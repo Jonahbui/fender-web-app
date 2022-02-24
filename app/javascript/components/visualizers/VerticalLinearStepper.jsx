@@ -14,7 +14,7 @@ import {
 
 class VerticalLinearStepper extends React.Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       activeStep: 0
     }
