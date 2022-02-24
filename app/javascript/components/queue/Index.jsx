@@ -8,6 +8,14 @@ import Panel from '../panels/Panel'
 import VerticalLinearStepper from '../visualizers/VerticalLinearStepper'
 
 class Index extends React.Component {
+  /*
+    const [ticketSelection, setTicketSelection] = React.useState(null);
+    const handleTicketSelect = (event) => {
+      var ticket_number = event.currentTarget.id.split('-')[1];
+      setTicketSelection(ticket_number);
+    }
+  */
+
   render () {
     const ticket_componenet =  <Container align="center" sx={{ my: 4 }}>
         <VerticalLinearStepper steps={this.props.steps}/>

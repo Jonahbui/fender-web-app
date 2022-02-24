@@ -1,20 +1,57 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Button, Box, Container, Stack, Typography } from '@mui/material';
+import { Button, Box, Container, FormControl, Stack, Typography } from '@mui/material';
 import ComboBox from "../inputs/ComboBox"
 import Panel from "../panels/Panel"
 
 class Index extends React.Component {
+
+  /*
+    var a = 10;
+    const [departure, setDeparture] = React.useState(null);
+    const [destination, setDestination] = React.useState(null);
+
+    const handleDepartureSelect = (event, value) => {
+      locations.forEach(location => {
+        if(location.label == value){
+          setDeparture(location.code);
+        }
+      });
+    }
+
+    const handleDestinationSelect = (event, value) => {
+      locations.forEach(location => {
+        if(location.label == value){
+          setDestination(location.code);
+        }
+      });
+    }
+
+    function submitRequest (){
+      const data = {
+        "id"        : a++,
+        "departure" : departure,
+        "destination" : destination
+      }
+      console.log(data);
+      tickets.push(data);
+    };
+
+
+  */
+
   render () {
     const enqueue_content = <Container sx={{p: 4}}>
-      <Stack spacing={3} align="center">
-        <ComboBox label_name="Departure" items={this.props.locations}/>
-        <ComboBox label_name="Destination" items={this.props.locations}/>
-        <Box>
-          <Button variant="contained" sx={{ width: 300 }} >Submit</Button>
-        </Box>
-      </Stack>
+      <FormControl>
+        <Stack spacing={3} align="center">
+          <ComboBox label_name="Departure" items={this.props.locations}/>
+          <ComboBox label_name="Destination" items={this.props.locations}/>
+          <Box>
+            <Button variant="contained" sx={{ width: 300 }} >Submit</Button>
+          </Box>
+        </Stack>
+      </FormControl>
     </Container>
 
 
