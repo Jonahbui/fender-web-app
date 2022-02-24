@@ -6,11 +6,16 @@ Rails.application.routes.draw do
   
   resources :enqueue, only: [:index]
   resources :info, only: [:index]
-  resources :queue
-
+  
   namespace :admin do
     get 'test/index'
     
+  end
+  
+  namespace :api do
+    namespace :v1 do
+      resources :queue
+    end
   end
 
   resources :docs, only: [:index] do

@@ -1,4 +1,4 @@
-class QueueController < ApplicationController
+class Api::V1::QueueController < ApplicationController
   def show
   end
 

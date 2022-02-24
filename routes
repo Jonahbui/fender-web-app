@@ -2,15 +2,15 @@
                                     root GET    /                                                                                                 enqueue#index
                            enqueue_index GET    /enqueue(.:format)                                                                                enqueue#index
                               info_index GET    /info(.:format)                                                                                   info#index
-                             queue_index GET    /queue(.:format)                                                                                  queue#index
-                                         POST   /queue(.:format)                                                                                  queue#create
-                               new_queue GET    /queue/new(.:format)                                                                              queue#new
-                              edit_queue GET    /queue/:id/edit(.:format)                                                                         queue#edit
-                                   queue GET    /queue/:id(.:format)                                                                              queue#show
-                                         PATCH  /queue/:id(.:format)                                                                              queue#update
-                                         PUT    /queue/:id(.:format)                                                                              queue#update
-                                         DELETE /queue/:id(.:format)                                                                              queue#destroy
                         admin_test_index GET    /admin/test/index(.:format)                                                                       admin/test#index
+                      api_v1_queue_index GET    /api/v1/queue(.:format)                                                                           api/v1/queue#index
+                                         POST   /api/v1/queue(.:format)                                                                           api/v1/queue#create
+                        new_api_v1_queue GET    /api/v1/queue/new(.:format)                                                                       api/v1/queue#new
+                       edit_api_v1_queue GET    /api/v1/queue/:id/edit(.:format)                                                                  api/v1/queue#edit
+                            api_v1_queue GET    /api/v1/queue/:id(.:format)                                                                       api/v1/queue#show
+                                         PATCH  /api/v1/queue/:id(.:format)                                                                       api/v1/queue#update
+                                         PUT    /api/v1/queue/:id(.:format)                                                                       api/v1/queue#update
+                                         DELETE /api/v1/queue/:id(.:format)                                                                       api/v1/queue#destroy
                           queue_api_docs GET    /docs/queue_api(.:format)                                                                         docs#queue_api
                                     docs GET    /docs(.:format)                                                                                   docs#index
         turbo_recede_historical_location GET    /recede_historical_location(.:format)                                                             turbo/native/navigation#recede
