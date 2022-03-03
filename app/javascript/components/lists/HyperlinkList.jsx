@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import {List as MuiList} from '@mui/material';
-import { Divider, ListItem, ListItemText } from '@mui/material';
-import { lightBlue } from "@mui/material/colors";
+import {List as MuiList} from '@mui/material'
+import { Divider, ListItem, ListItemText } from '@mui/material'
+import { lightBlue } from "@mui/material/colors"
 
 class HyperlinkList extends React.Component {
   render () {

@@ -18,5 +18,8 @@ class Bot
   def connected?
     return @connected ? "Online" : "Offline"
   end
-  
+
+  def current_ticket?(ticket)
+    return @current_ticket == ticket
+  end
 end

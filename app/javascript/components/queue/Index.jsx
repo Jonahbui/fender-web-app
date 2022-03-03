@@ -4,10 +4,21 @@ import PropTypes from "prop-types"
 import { Container } from '@mui/material'
 import List from '../lists/List'
 import HyperlinkList from '../lists/HyperlinkList'
+import TicketList from '../lists/TicketList'
 import Panel from '../panels/Panel'
 import VerticalLinearStepper from '../visualizers/VerticalLinearStepper'
 
 class Index extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+
+    }
+    this.handleTicketSelect = this.handleTicketSelect.bind(this)
+  }
+  handleTicketSelect(event){
+
+  }
   /*
     const [ticketSelection, setTicketSelection] = React.useState(null);
     const handleTicketSelect = (event) => {
@@ -27,7 +38,7 @@ class Index extends React.Component {
         xs: 12, 
         md: 3, 
         minHeight: 0, 
-        component_to_render: <HyperlinkList content={this.props.tickets_content}/> 
+        component_to_render: <TicketList content={this.props.tickets_content} selectHandler={this.selectHandler}/> 
       },
       { 
         key: 'queue-ticket',

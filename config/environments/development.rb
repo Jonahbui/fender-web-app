@@ -1,6 +1,8 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.web_console.whiny_requests = false
+  
   config.react.variant = :development
   # Settings specified here will take precedence over those in config/application.rb.
 

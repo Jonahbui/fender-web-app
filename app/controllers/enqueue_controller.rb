@@ -11,6 +11,9 @@ class EnqueueController < ApplicationController
     begin
       departure_id = Location.find_by_name(params[:departure]).id
       destination_id = Location.find_by_name(params[:destination]).id
+      
+      raise Exception.new "Departure location cannot be the same as destination!" if departure_id == destination_id
+
       Ticket.create(departure_id: departure_id, destination_id: destination_id)
     rescue => e
       response[:success] = false

@@ -4,14 +4,6 @@
     All .jsx/.js files get recompiled into a single file and delivered.
   --->
   <%= 
-      tickets_content = []
-      Ticket.all.map { |ticket| 
-        tickets_content << { 
-          key: "ticket-#{ticket.id}",
-          link: "",
-          link_text: "Ticket #{ticket.id}"
-        }
-      }
     steps = [
       {
         label: 'Ticket Received',
@@ -52,6 +44,6 @@
         secondary_text: Ticket.all.count.to_s
       }
     ]
-    react_component("queue/Index", {steps: steps, tickets_content: tickets_content, info_content: info_content}) 
+    react_component("queue/Index", {steps: steps, tickets_content: Ticket.get_tickets, info_content: info_content}) 
   %>
 </body>
