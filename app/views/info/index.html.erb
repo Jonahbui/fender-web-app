@@ -5,7 +5,7 @@
         {
           key: "info-service-fender-connection",
           primary_text: "Fender Connection",
-          secondary_text: "Offline"
+          secondary_text: Bot.instance.connected?
         },
         {
           key: "info-service-current-ticket",
@@ -22,12 +22,12 @@
       {
         key: "info-fender-battery-life",
         primary_text: "Battery Life",
-        secondary_text: "0%"
+        secondary_text: "#{Bot.instance.battery_life}%"
       },
       {
         key: "info-fender-last-location",
         primary_text: "Last Location",
-        secondary_text: "ERB 335A Indefinitely"
+        secondary_text: Bot.instance.last_location
       }
     ]
     docs_content = [
@@ -41,17 +41,17 @@
       {
         key: "info-support-email",
         primary_text: "Email",
-        secondary_text: "john@doe.edu"
+        secondary_text: Bot.instance.email
       },
       {
         key: "info-support-phone-number",
         primary_text: "Phone Number",
-        secondary_text: "1-800-265-Empire"
+        secondary_text: Bot.instance.phone_number
       },
       {
         key: "info-support-address",
         primary_text: "Address",
-        secondary_text: "ERB 335A"
+        secondary_text: Bot.instance.address
       }
     ]
     react_component("info/Index", { 
