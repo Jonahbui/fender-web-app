@@ -44,17 +44,21 @@ class Index extends React.Component {
     })
   };
 
+  /* 
+    Leaving from => Departure
+    Going to => Destination
+  */
   render () {
     const enqueue_content = <Container sx={{p: 4}} align="center">
       <FormControl>
         <Stack spacing={3} align="center">
           <ComboBox 
-            label_name="Departure" 
+            label_name="Leaving from" 
             items={this.props.locations}
             handler={this.handleDepartureInput}
           />
           <ComboBox 
-            label_name="Destination" 
+            label_name="Going to" 
             items={this.props.locations}
             handler={this.handleDestinationInput}
             />
@@ -70,8 +74,8 @@ class Index extends React.Component {
       <Typography variant="h6">Process</Typography>
       <ol>
         <Typography>
-          <li>Select a departure location</li>
-          <li>Select a destination</li>
+          <li>Select which location the fender is leaving from</li>
+          <li>Select which location the fender is going to</li>
           <li>Submit</li>
         </Typography>
       </ol>
@@ -84,8 +88,8 @@ class Index extends React.Component {
       <Typography variant="h6" sx={{mt:2}}>Tips</Typography>
       <ul>
         <Typography>
-          <li><b>Departure</b> is where the Fender will arrive to pick up the package, and leave from</li>
-          <li><b>Destination</b> is where the Fender will go to drop off the package</li>
+          <li><b>Leaving from</b> is where the Fender will arrive to pick up the package, and depart from</li>
+          <li><b>Going to</b> is where the Fender will go to drop off the package</li>
         </Typography>
       </ul>
     </Box>
@@ -102,7 +106,7 @@ class Index extends React.Component {
 
 
     const panel_content = [
-      { title: "Enqueue", xs: 12, md: 12, minHeight: 0, component_to_render: enqueue_content, key: "enqueue-enqueue"},
+      { title: "Request a Delivery", xs: 12, md: 12, minHeight: 0, component_to_render: enqueue_content, key: "enqueue-enqueue"},
       { title: "Instructions", xs: 12, md: 6, minHeight: 0, component_to_render: instructions_content, key: "enqueue-instructions"},
       { title: "Overview", xs: 12, md: 6, minHeight: 0, component_to_render: overview_content, key: "enqueue-overview" }
     ]
