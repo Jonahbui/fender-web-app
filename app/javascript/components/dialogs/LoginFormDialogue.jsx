@@ -33,12 +33,13 @@ class LoginFormDialogue extends React.Component {
   handleSubmission(event){
     console.log(this.state.email);
     console.log(this.state.password);
+    console.log(event);
   }
   render () {
     return (
       <Dialog open={this.props.open} onClose={this.props.handleClose}>
         <DialogTitle>Login</DialogTitle>
-        <form id="login-form" action={this.props.sign_in_action} data-remote="true" method="post" onSubmit={this.handleSubmission}>
+        <form id="login-form" action={this.props.sign_in_action} acceptCharset="UTF-8" data-remote="true" method="post" onSubmit={this.handleSubmission}>
         
           <DialogContent>
             <DialogContentText>
@@ -47,18 +48,18 @@ class LoginFormDialogue extends React.Component {
             <TextField
               autoFocus
               margin="dense"
-              name="email"
+              name="user[email]"
               id="login-email"
               label="Email Address"
+              autoComplete="email"
               type="email"
               fullWidth
               variant="standard"
               onChange={this.handleEmailInput}
             />
             <TextField
-              autoFocus
               margin="dense"
-              name="password"
+              name="user[password]"
               id="login-password"
               label="Password"
               type="password"
