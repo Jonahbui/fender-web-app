@@ -1,3 +1,6 @@
 <body>
-  <%= react_component("enqueue/Index", {locations: Location.get_locations}) %>
+  <%= react_component("enqueue/Index", {
+    locations: Location.get_locations,
+    add_enqueue_url: add_enqueue_index_url
+  }) %>
 </body>

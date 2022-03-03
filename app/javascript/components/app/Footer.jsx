@@ -15,12 +15,12 @@ class Footer extends React.Component {
       <React.Fragment>
         <Paper sx={{ position: 'fixed', bottom:0, left: 0, right: 0 }} elevation={3}>
           <BottomNavigation showLabels>
-            <BottomNavigationAction href={this.props.queue_url} label="Queue" icon={<ConfirmationNumberIcon />} />
-            <BottomNavigationAction href={this.props.home_url} label="Home" icon={<House />} />
-            <BottomNavigationAction href={this.props.info_url} label="Info" icon={<InfoIcon />} />
+            <BottomNavigationAction href={this.props.queue_path} label="Queue" icon={<ConfirmationNumberIcon />} />
+            <BottomNavigationAction href={this.props.home_path} label="Home" icon={<House />} />
+            <BottomNavigationAction href={this.props.info_path} label="Info" icon={<InfoIcon />} />
             {
               this.props.signed_in &&
-              <BottomNavigationAction href={this.props.info_url} label="Admin" icon={<ConstructionIcon style={{color: 'red'}}/>} />
+              <BottomNavigationAction href={this.props.admin_path} label="Admin" icon={<ConstructionIcon style={{color: 'red'}}/>} />
             }
           </BottomNavigation>
         </Paper>
@@ -33,9 +33,10 @@ class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  queue_url: PropTypes.string,
-  home_url: PropTypes.string,
-  info_url: PropTypes.string,
+  queue_path: PropTypes.string,
+  home_path: PropTypes.string,
+  info_path: PropTypes.string,
+  admin_path: PropTypes.string
 }
 
 export default Footer

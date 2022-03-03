@@ -36,10 +36,10 @@
   
   <footer>
     <%= react_component("app/Footer", {
-      queue_url: api_v1_queue_index_path, 
-      home_url: enqueue_index_path, 
-      info_url: info_index_path,
-      admin_url: "",
+      queue_path: api_v1_queue_index_path, 
+      home_path: enqueue_index_path, 
+      info_path: info_index_path,
+      admin_path: admin_controls_index_path,
       signed_in: user_signed_in?
     }) %>
   </footer>

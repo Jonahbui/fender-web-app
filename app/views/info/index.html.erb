@@ -1,5 +1,4 @@
 <body>
-
   <%= 
       service_content = [
         {
@@ -10,12 +9,12 @@
         {
           key: "info-service-current-ticket",
           primary_text: "Current Ticket",
-          secondary_text: "1"
+          secondary_text: Bot.instance.current_ticket.to_s
         },
         {
           key: "info-service-total-tickets",
           primary_text: "Total Tickets",
-          secondary_text: "1"
+          secondary_text: Ticket.all.count.to_s
         }
       ]
     fender_content = [

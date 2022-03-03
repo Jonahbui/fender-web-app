@@ -2,7 +2,7 @@ require 'singleton'
 
 class Bot
   include Singleton
-  attr_accessor :battery_life, :last_location, :connected
+  attr_accessor :battery_life, :last_location, :connected, :current_ticket
   attr_reader :phone_number, :address, :email
 
   def initialize()
@@ -12,6 +12,7 @@ class Bot
     @email = "jonh@doe.edu"
     @last_location = "ERB 335A"
     @connected = false
+    @current_ticket = -1
   end
 
   def connected?

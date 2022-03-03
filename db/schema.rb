@@ -22,10 +22,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_24_032423) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.string "departure"
-    t.string "destination"
+    t.bigint "departure_id"
+    t.bigint "destination_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["departure_id"], name: "index_tickets_on_departure_id"
+    t.index ["destination_id"], name: "index_tickets_on_destination_id"
   end
 
   create_table "users", force: :cascade do |t|

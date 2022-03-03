@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.3",
     "@rails/webpacker": "5.4.3",
+    "axios": "^0.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "jquery": "^3.6.0",
     "prop-types": "^15.8.1",

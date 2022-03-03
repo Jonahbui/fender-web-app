@@ -15,9 +15,10 @@
                                          DELETE /users(.:format)                                                                                  devise/registrations#destroy
                                          POST   /users(.:format)                                                                                  devise/registrations#create
                                     root GET    /                                                                                                 enqueue#index
+                       add_enqueue_index POST   /enqueue/add(.:format)                                                                            enqueue#add
                            enqueue_index GET    /enqueue(.:format)                                                                                enqueue#index
                               info_index GET    /info(.:format)                                                                                   info#index
-                        admin_test_index GET    /admin/test/index(.:format)                                                                       admin/test#index
+                    admin_controls_index GET    /admin/controls/index(.:format)                                                                   admin/controls#index
                       api_v1_queue_index GET    /api/v1/queue(.:format)                                                                           api/v1/queue#index
                                          POST   /api/v1/queue(.:format)                                                                           api/v1/queue#create
                         new_api_v1_queue GET    /api/v1/queue/new(.:format)                                                                       api/v1/queue#new

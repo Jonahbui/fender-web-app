@@ -5,11 +5,15 @@ Rails.application.routes.draw do
   # Root path for application
   root 'enqueue#index'
   
-  resources :enqueue, only: [:index]
+  resources :enqueue, only: [:index] do
+    collection do
+      post 'add', to: 'enqueue#add'
+    end
+  end
   resources :info, only: [:index]
   
   namespace :admin do
-    get 'test/index'
+    get 'controls/index'
     
   end
   

@@ -3,8 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.0"
 
+# Use as HTML alternative
+gem 'haml'
+
+# Use for user authentication
 gem 'devise'
+
+# Use for async jobs
 gem 'delayed_job_active_record'
+
+# Use to integrate react
 gem 'react-rails'
 gem 'webpacker'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

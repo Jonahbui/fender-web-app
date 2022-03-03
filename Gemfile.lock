@@ -109,6 +109,9 @@ GEM
     execjs (2.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    haml (5.2.2)
+      temple (>= 0.8.0)
+      tilt
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.0.2)
@@ -218,6 +221,7 @@ GEM
     stimulus-rails (1.0.2)
       railties (>= 6.0.0)
     strscan (3.0.1)
+    temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.2.0)
@@ -258,6 +262,7 @@ DEPENDENCIES
   debug
   delayed_job_active_record
   devise
+  haml
   importmap-rails
   jbuilder
   pg (~> 1.1)
