@@ -22,6 +22,7 @@ class Index extends React.Component {
       </Container>
     const content = [
       { 
+        key: "queue-tickets",
         title: "Tickets", 
         xs: 12, 
         md: 3, 
@@ -29,13 +30,15 @@ class Index extends React.Component {
         component_to_render: <HyperlinkList content={this.props.tickets_content}/> 
       },
       { 
-        title: "Ticket", 
+        key: 'queue-ticket',
+        title: "Ticket",
         xs: 12, 
         md: 6, 
         minHeight: 0, 
         component_to_render: ticket_componenet
       },
       { 
+        key: 'queue-info',
         title: "Info", 
         xs: 12, 
         md: 3, 

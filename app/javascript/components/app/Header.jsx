@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import Logo from "../logos/Logo";
-import LoginFormDialogue from "../dialogs/LoginFormDialogue";
+import SigninFormDialogue from "../dialogs/SigninFormDialogue";
 import { data } from "jquery";
 
 class Header extends React.Component {
@@ -48,7 +48,7 @@ class Header extends React.Component {
     return (
       <React.Fragment>
 
-        <LoginFormDialogue 
+        <SigninFormDialogue 
           open={this.state.open} 
           handleClose={this.handleClose}
           sign_in_action={this.props.sign_in_action}

@@ -12,7 +12,7 @@ import {
   Typography
 } from '@mui/material';
 
-class LoginFormDialogue extends React.Component {
+class SigninFormDialogue extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -21,7 +21,6 @@ class LoginFormDialogue extends React.Component {
     }
     this.handleEmailInput = this.handleEmailInput.bind(this)
     this.handlePasswordInupt = this.handlePasswordInupt.bind(this)
-    this.handleSubmission = this.handleSubmission.bind(this);
   }
 
   handleEmailInput(event){
@@ -30,16 +29,11 @@ class LoginFormDialogue extends React.Component {
   handlePasswordInupt(event){
     this.setState({password: event.target.value})
   }
-  handleSubmission(event){
-    console.log(this.state.email);
-    console.log(this.state.password);
-    console.log(event);
-  }
   render () {
     return (
       <Dialog open={this.props.open} onClose={this.props.handleClose}>
-        <DialogTitle>Login</DialogTitle>
-        <form id="login-form" action={this.props.sign_in_action} acceptCharset="UTF-8" data-remote="true" method="post" onSubmit={this.handleSubmission}>
+        <DialogTitle>Sign In</DialogTitle>
+        <form id="sign-in-form" action={this.props.sign_in_action} acceptCharset="UTF-8" data-remote="true" method="post" >
         
           <DialogContent>
             <DialogContentText>
@@ -49,7 +43,7 @@ class LoginFormDialogue extends React.Component {
               autoFocus
               margin="dense"
               name="user[email]"
-              id="login-email"
+              id="sign-in-email"
               label="Email Address"
               autoComplete="email"
               type="email"
@@ -60,7 +54,7 @@ class LoginFormDialogue extends React.Component {
             <TextField
               margin="dense"
               name="user[password]"
-              id="login-password"
+              id="sign-in-password"
               label="Password"
               type="password"
               fullWidth
@@ -81,10 +75,10 @@ class LoginFormDialogue extends React.Component {
   }
 }
 
-LoginFormDialogue.propTypes = {
+SigninFormDialogue.propTypes = {
   open: PropTypes.bool,
   handleClose: PropTypes.func,
   sign_in_action: PropTypes.string
 }
 
-export default LoginFormDialogue
+export default SigninFormDialogue
