@@ -4,16 +4,23 @@ import PropTypes from 'prop-types'
 import {List as MuiList} from '@mui/material'
 import { Divider } from '@mui/material'
 
+import TicketComboBox from '../inputs/TicketComboBox'
 import Ticket from '../selects/Ticket'
 
 class TicketList extends React.Component {
   render () {
-    return (
+    return (<React.Fragment>
+      <TicketComboBox
+        label_name="Search Ticket"
+        items={this.props.content}
+        handler={this.props.searchHandler}
+        width={1}
+      />
       <MuiList style={{padding:0}}>
       {
-        this.props.content.map((list_content) => (<React.Fragment>
+        this.props.content.map((list_content) => (<React.Fragment key={"main-"+list_content['key']}>
           <Ticket 
-            id={list_content['id']} 
+            id={list_content['id']}
             departure={list_content['departure']}
             destination={list_content['destination']}
             current={list_content['current']}
@@ -22,7 +29,7 @@ class TicketList extends React.Component {
           <Divider light />
         </React.Fragment>))
       }
-    </MuiList>
+    </MuiList></React.Fragment>
     );
   }
 }
@@ -35,7 +42,8 @@ TicketList.propTypes = {
     destination: PropTypes.string,
     current: PropTypes.bool
   })),
-  selectHandler: PropTypes.func
+  selectHandler: PropTypes.func,
+  searchHandler: PropTypes.func
 }
 
 export default TicketList

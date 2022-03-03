@@ -5,8 +5,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Box } from '@mui/material';
 
-
-class ComboBox extends React.Component {
+class TicketComboBox extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -15,8 +14,8 @@ class ComboBox extends React.Component {
             autoSelect
             disablePortal
             options={this.props.items}
-            getOptionLabel={(option) => option.name || option.id ||""}
-            sx={{ width:  this.props.width, display: { xs: 'flex', md: 'flex' }}}
+            getOptionLabel={(option) => option.name || "Ticket " + option.id ||""}
+            sx={{ width:  this.props.width, pt: 1, display: { xs: 'flex', md: 'flex' }}}
             renderInput={(params) => <TextField {...params} label={this.props.label_name} />}
             onInputChange={this.props.handler}
           />
@@ -26,18 +25,18 @@ class ComboBox extends React.Component {
   }
 }
 
-ComboBox.defaultTypes = {
+TicketComboBox.defaultTypes = {
   label_name: "Select Value",
   handler: null,
   items: [],
   width: 300
 }
 
-ComboBox.propTypes = {
+TicketComboBox.propTypes = {
   label_name: PropTypes.string,
   handler: PropTypes.func,
   items: PropTypes.array,
   width: PropTypes.number
 }
 
-export default ComboBox
+export default TicketComboBox

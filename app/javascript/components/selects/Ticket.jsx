@@ -8,9 +8,9 @@ class Ticket extends React.Component {
     return (
       <React.Fragment>
         <ListItem 
-          key={this.props.key} 
           id={this.props.id} button 
           onClick={this.props.selectHandler}
+          value={this.props.id}
         >
           <ListItemText 
             primary={`Ticket ${this.props.id}`} 
@@ -26,7 +26,6 @@ class Ticket extends React.Component {
 }
 
 Ticket.propTypes = {
-  key: PropTypes.string,
   id: PropTypes.number,
   departure: PropTypes.string,
   destination: PropTypes.string,
