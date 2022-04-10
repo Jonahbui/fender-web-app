@@ -12,13 +12,14 @@ class ComboBox extends React.Component {
       <React.Fragment>
         <Box >
           <Autocomplete
+            id={this.props.id}
             autoSelect
             disablePortal
             options={this.props.items}
             getOptionLabel={(option) => option.name || option.id ||""}
             sx={{ width:  this.props.width, display: { xs: 'flex', md: 'flex' }}}
             renderInput={(params) => <TextField {...params} label={this.props.label_name} />}
-            onInputChange={this.props.handler}
+            onChange={this.props.handler}
           />
         </Box>
       </React.Fragment>

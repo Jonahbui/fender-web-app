@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import '../../loader.js'
+const $ = window.$
 import { Button, Box, Container, FormControl, Stack, Typography } from '@mui/material';
 import ComboBox from "../inputs/ComboBox"
 import Panel from "../panels/Panel"
@@ -18,14 +19,22 @@ class Index extends React.Component {
     this.submitRequest = this.submitRequest.bind(this)
   }
   handleDepartureInput(event){
-    this.setState({departure: event.target.innerText})
-    console.log(this.state.departure)
+    this.setState(
+      {departure: $("#leaving_from_combobox")[0].value},
+      ()=>{console.log(this.state.departure)}
+    )
+    
   }
   handleDestinationInput(event){
-    this.setState({destination: event.target.innerText})
+    this.setState({destination: $("#going_to_combobox")[0].value})
     console.log(this.state.destination)
   }
   submitRequest(){
+    this.setState({departure: $("#leaving_from_combobox")[0].value})
+    this.setState({destination: $("#going_to_combobox")[0].value})
+    console.log(this.state.departure)
+    console.log(this.state.destination)
+    
     const axios = require('axios')
     // https://guides.rubyonrails.org/working_with_javascript_in_rails.html
     // https://api.jquery.com/jquery.ajax/
@@ -53,11 +62,13 @@ class Index extends React.Component {
       <FormControl>
         <Stack spacing={3} align="center">
           <ComboBox 
+            id="leaving_from_combobox"
             label_name="Leaving from" 
             items={this.props.locations}
             handler={this.handleDepartureInput}
           />
           <ComboBox 
+            id="going_to_combobox"
             label_name="Going to" 
             items={this.props.locations}
             handler={this.handleDestinationInput}
