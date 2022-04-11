@@ -21,6 +21,7 @@
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
+    "speed-measure-webpack-plugin": "^1.5.0",
     "webpack-dev-server": "^3"
   },
   "license": "UNLICENSED"

@@ -20,21 +20,20 @@ class Index extends React.Component {
   }
   handleDepartureInput(event){
     this.setState(
-      {departure: $("#leaving_from_combobox")[0].value},
-      ()=>{console.log(this.state.departure)}
+      {departure: event.target.innerText},
+      ()=>{
+        console.log(this.state.departure)
+      }
     )
     
   }
   handleDestinationInput(event){
-    this.setState({destination: $("#going_to_combobox")[0].value})
-    console.log(this.state.destination)
+    this.setState(
+      {destination: event.target.innerText}, 
+      ()=> {console.log(this.state.destination)}
+    )
   }
   submitRequest(){
-    this.setState({departure: $("#leaving_from_combobox")[0].value})
-    this.setState({destination: $("#going_to_combobox")[0].value})
-    console.log(this.state.departure)
-    console.log(this.state.destination)
-    
     const axios = require('axios')
     // https://guides.rubyonrails.org/working_with_javascript_in_rails.html
     // https://api.jquery.com/jquery.ajax/
