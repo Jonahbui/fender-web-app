@@ -11,7 +11,7 @@ This web application is used to operate the FENDER located at The University of 
 * [Application Info](#application-info)
 * [Dependencies](#dependencies)
 * [References](#references)
-* [Fixes](#fixes)
+* [Errors](#errors)
 * [Authors](#authors)
 
 
@@ -67,11 +67,14 @@ bundle exec rspec
 ```
 - If you are running the application windows and would like to use powershell scripts, ensure your 
 windows device has its [execution policy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2) set to run scripts.
+- Compilation of js-code, as it is served to the web-client, is BEYOND slow. Should find a way to speed up the process. Might be because there are too many needless dependencies. Should find a way to remove or filter them out. Material-UI might be  the biggest culprit.
+- For those who have never used docker, DO NOT deploy this website on a web-hosting service. You should just build it from the ground up.
 
 
 ## Application Info
 * Ruby version: 3.1.0
 * Database: postgresql
+* Although not implemented, the website can be hosted on Droplet by Digital Ocean.
 
 
 ## Dependencies
@@ -90,7 +93,7 @@ windows device has its [execution policy](https://docs.microsoft.com/en-us/power
 * [Docker for Rails](https://docs.docker.com/samples/rails/)
 * [Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
-## Fixes
+## Errors
 ### JSON::ParserError
 ```
 /usr/local/lib/ruby/3.1.0/json/common.rb:216:in `parse': 859: unexpected token at '' (JSON::ParserError)
